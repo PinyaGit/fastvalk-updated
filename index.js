@@ -120,7 +120,7 @@ module.exports = function ValkJS(mod) {
         }
     });
 
-    mod.hook('S_EACH_SKILL_RESULT', 15, { 'order': -10000000 }, event => {
+    mod.hook('S_EACH_SKILL_RESULT', 14, { 'order': -10000000 }, event => {
         if (!isEnabled || !lastTimeout || event.target !== mod.game.me.gameId || !event.reaction.enable) return;
         mod.clearTimeout(lastTimeout);
         lastTimeout = null;        
